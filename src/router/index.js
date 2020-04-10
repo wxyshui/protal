@@ -13,6 +13,8 @@ import Portal from '@/components/Portal/portal'
 import PortalIndex from '@/components/Portal/index'
 //  最新资讯
 import LatestNews from '@/components/Portal/latestnews'
+// 所有资讯
+import AllNotice from '@/components/Portal/components/Allnotice'
 Vue.use(Router)
 
 export const constantRouterMap = [
@@ -63,12 +65,20 @@ export const constantRouterMap = [
         name: 'portalIndex',
         component: PortalIndex
       },
+      
       {
         //最新资讯
         path:'latestnews',
         name:'latestnews',
         component:LatestNews
-      }
+      },
+      {
+        //所有资讯
+        path:'allnotice',
+        name:'allnotice',
+        component:AllNotice
+      },
+      
     ]
   },
   {

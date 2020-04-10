@@ -5,7 +5,7 @@
  * @LastEditTime: 2020-03-12 19:46:32
  -->
 <template>
-    <div style="margin-bottom:.1rem;" class="carousel">
+    <div style="margin-bottom:.2rem;" class="carousel">
         <el-carousel :interval="5000" arrow="always">
             <el-carousel-item v-for="item in 4" :key="item">
                 <h3>{{ item }}</h3>
@@ -38,4 +38,5 @@ export default {
   .carousel >>>.el-carousel__container {
     height 2.7rem
   }
+  
 </style>

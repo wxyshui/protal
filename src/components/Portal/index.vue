@@ -6,6 +6,8 @@
     <protal-notice></protal-notice>
     <!-- 最新资讯 -->
     <protal-message></protal-message>
+    <!-- 专家访谈 -->
+    <protal-interview></protal-interview>
   </div>
 </template>
 
@@ -13,12 +15,14 @@
 import ProtalCarousel from './components/index/protalcarousel'
 import ProtalNotice from './components/index/protalnotice'
 import ProtalMessage from './components/index/protalmessage'
+import ProtalInterview from './components/index/protalinterview'
 export default {
   name:'portalIndex',
   components:{
     ProtalCarousel,
     ProtalNotice,
-    ProtalMessage
+    ProtalMessage,
+    ProtalInterview
   }
 }
 </script>

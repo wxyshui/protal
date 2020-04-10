@@ -1,24 +1,26 @@
 <template>
     <div class="swiper-box">
-        <swiper :options="swiperOption">
-          <swiper-slide v-for="(page, index) of pages" :key="index" class="flex-box">
+        <div class="news">最新资讯</div>
+        <swiper :options="swiperOption" >
+            <swiper-slide v-for="(page, index) of pages" :key="index" class="flex-box">
             <!--循环显示的内容-->
-            <div class="recom-box" v-for="item of page" :key="item.id">
-              <div class="file-img">
-                <img :src="item.coursewareImg" alt />
-              </div>
-              <div class="file-info">
-                <p>{{item.title}}</p>
-                <span>{{item.time}}</span>
-              </div>
-            </div>
-          </swiper-slide>
-          <div class="swiper-pagination" slot="pagination"></div>
+                <div class="recom-box" v-for="item of page" :key="item.id">
+                    <div class="file-img">
+                    <img :src="item.coursewareImg" alt />
+                    </div>
+                    <div class="file-info">
+                    <p>{{item.title}}</p>
+                    <!-- <span>{{item.time}}</span>、 -->
+                    </div>
+                </div>
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+            
         </swiper>
         <!-- 箭头 -->
         <div class="swiper-button-prev swiper-button-prev1"></div>
         <div class="swiper-button-next swiper-button-next1"></div>
-      </div>
+    </div>
 </template>
 
 <script>
@@ -117,36 +119,62 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
 /* 内容 */
 .flex-box{
     display flex
     justify-content space-between
+}
+.news {
+    width .8rem
+    height 0.3rem
+    color #0079fe
+    font-weight 700
+    border-radius .6rem
+    border .01rem solid #0079fe
+    text-align center
+    line-height .28rem
+    margin-bottom .2rem
+}
+.news:hover {
+    cursor pointer
 }
 .recom-box {
     width 2.2rem
 }
 .file-img{
     img {
-        width 2rem
+        width 2.2rem
         border-radius .04rem
         margin-bottom .1rem
     }
     
 }
 .file-info {
-
+    font-size 0.12rem
+    display flex
+    justify-content space-between
+    p {
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+    }
+    span {
+        width .8rem
+    }
 }
 /* 轮播 */
 .swiper-box{
     position relative
+    margin-bottom .2rem
 }
 .swiper-button-prev1{
     left -.4rem
-    top .8rem
-    color #00b087
+    top 1.3rem
 }
 .swiper-button-next1{
-    right -.2rem
-    top .8rem
+    right -.4rem
+    top 1.3rem
 }
+
 </style>
